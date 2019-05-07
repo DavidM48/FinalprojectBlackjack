@@ -549,7 +549,7 @@ public class Blackjack_Table extends AppCompatActivity implements GestureDetecto
 
     private void bet() {
         if (betLock) {
-            Toast.makeText(this, "Betting is locked, bet can not be changed this round.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Betting is locked, bet can not be changed this round.", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -576,8 +576,6 @@ public class Blackjack_Table extends AppCompatActivity implements GestureDetecto
             buttonBet.setBackground(getDrawable(R.drawable.button_fade));
             buttonBet.startAnimation(animationHalf);
             buttonBet.setAlpha(0.5f);
-
-            Toast.makeText(this, "Betting is now locked.", Toast.LENGTH_SHORT).show();
         }
 
         if (dealersDeck.empty())
