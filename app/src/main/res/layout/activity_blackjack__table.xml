@@ -172,7 +172,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/gameState"
         android:layout_centerInParent="true"
-        android:alpha="0.7"
         android:textColor="@color/colorFade"
         android:textSize="12sp" />
 
