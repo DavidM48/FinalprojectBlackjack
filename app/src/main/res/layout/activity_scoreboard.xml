@@ -58,11 +58,11 @@
                 android:layout_weight="1"
                 android:width="0dp"
                 android:fontFamily="serif-monospace"
+                android:onClick="sortByScore"
                 android:text="@string/txtScore"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:onClick="sortByScore"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtWinsSBLabel"
@@ -75,11 +75,11 @@
                 android:layout_weight="1"
                 android:width="0dp"
                 android:fontFamily="serif-monospace"
+                android:onClick="sortByWins"
                 android:text="@string/txtWins"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:onClick="sortByWins"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtWinStreakSBLabel"
@@ -92,11 +92,11 @@
                 android:layout_weight="1"
                 android:width="0dp"
                 android:fontFamily="serif-monospace"
+                android:onClick="sortByWinStreak"
                 android:text="@string/txtWinStreak"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:onClick="sortByWinStreak"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtLossesSBLabel"
@@ -109,11 +109,11 @@
                 android:layout_weight="1"
                 android:width="0dp"
                 android:fontFamily="serif-monospace"
+                android:onClick="sortByLosses"
                 android:text="@string/txtLoses"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:onClick="sortByLosses"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -126,12 +126,32 @@
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/buttons"
         android:onClick="back"
-        android:text="@string/btnBack" />
+        android:text="@string/btnBack"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btnClearDB"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/buttons"
+        android:onClick="back"
+        android:text="@string/btnClearDB"
+        android:textSize="12sp" />
 
 </RelativeLayout>

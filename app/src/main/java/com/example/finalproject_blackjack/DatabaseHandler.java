@@ -72,6 +72,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return scoreList;
     }
 
+    public void resetDB(){
+        //TODO
+    }
+
     @Override
     public String getDatabaseName() {
         return super.getDatabaseName();

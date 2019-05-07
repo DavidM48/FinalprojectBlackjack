@@ -28,4 +28,5 @@
     <string name="txtWins">Wins</string>
     <string name="txtWinStreak">Win Streak</string>
     <string name="txtLoses">Losses</string>
+    <string name="btnClearDB">Reset Scores</string>
 </resources>

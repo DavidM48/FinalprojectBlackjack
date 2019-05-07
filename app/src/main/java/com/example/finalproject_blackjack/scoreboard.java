@@ -42,6 +42,10 @@ public class scoreboard extends AppCompatActivity {
         finish();
     }
 
+    private void resetDB(){
+        //TODO
+    }
+
     public void sortBy(String sort){
         scoreList = MainActivity.databaseHandler.getAllContacts(sort);
         this.mAdapter.notifyDataSetChanged();
@@ -52,6 +56,10 @@ public class scoreboard extends AppCompatActivity {
 
     public void back(View view) {
         back();
+    }
+
+    public void resetDB(View view){
+        resetDB();
     }
 
     public void sortByScore(View view) {
