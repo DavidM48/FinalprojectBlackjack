@@ -159,12 +159,9 @@ public class Blackjack_Table extends AppCompatActivity implements GestureDetecto
             return;
 
         addCardToHand(dealersDeck.pop(), false, true);
+        addCardToHand(dealersDeck.pop(), true, false);
         addCardToHand(dealersDeck.pop(), false, false);
-        //Log.d(TAG, "startRound: dealers hand\n" + printHand(dealersHand) + "Value high ace: " + sumHand(dealersHand, true) + "\nValue low ace: " + sumHand(dealersHand, false));
-
         addCardToHand(dealersDeck.pop(), true, false);
-        addCardToHand(dealersDeck.pop(), true, false);
-        //Log.d(TAG, "startRound: players hand\n" + printHand(playersHand) + "Value high ace: " + sumHand(playersHand, true) + "\nValue low ace: " + sumHand(playersHand, false));
 
         if (checkFor21(dealersHand))
             gameStateDesc.setText(R.string.dealerBlackJack);
