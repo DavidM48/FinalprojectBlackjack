@@ -541,7 +541,8 @@ public class Blackjack_Table extends AppCompatActivity implements GestureDetecto
     }
 
     private void finishGame() {
-        MainActivity.databaseHandler.addScore(new score(score, wins, highestWinStreak, loses));
+        if (wins > 0 || loses > 0 || score > 100)
+            MainActivity.databaseHandler.addScore(new score(score, wins, highestWinStreak, loses));
 
         finish();
     }
