@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".scoreboard">
+
+    <TextView
+        android:id="@+id/txtTitleSB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="monospace"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtSubTitleSB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitleSB"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:text="@string/scoreBoard"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/scoreBoardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
+        android:paddingTop="50dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtScoreSBLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:width="0dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/txtScore"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="sortByScore"/>
+
+            <TextView
+                android:id="@+id/txtWinsSBLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:width="0dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/txtWins"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="sortByWins"/>
+
+            <TextView
+                android:id="@+id/txtWinStreakSBLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:width="0dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/txtWinStreak"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="sortByWinStreak"/>
+
+            <TextView
+                android:id="@+id/txtLossesSBLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:width="0dp"
+                android:fontFamily="serif-monospace"
+                android:text="@string/txtLoses"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="sortByLosses"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RecycleListViewSB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttons"
+        android:onClick="back"
+        android:text="@string/btnBack" />
+
+</RelativeLayout>

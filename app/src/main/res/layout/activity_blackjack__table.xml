@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/blackJackTable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    tools:context=".Blackjack_Table">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:id="@+id/gridAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="monospace"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/score"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/bet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/score"
+            android:text="@string/betAmount"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/wins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/title"
+            android:text="@string/wins"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/winStreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/wins"
+            android:text="@string/winStreak"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/losses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/winStreak"
+            android:text="@string/losses"
+            android:textAlignment="center" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnHit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStand"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/buttons"
+        android:onClick="hit"
+        android:text="@string/hit" />
+
+    <Button
+        android:id="@+id/btnStand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/buttons"
+        android:onClick="stand"
+        android:text="@string/stand" />
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStand"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/buttons"
+        android:onClick="restart"
+        android:text="@string/restart"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnBet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnHit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/buttons"
+        android:onClick="bet"
+        android:text="@string/bet" />
+
+    <ImageView
+        android:id="@+id/imgExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        android:maxWidth="50dp"
+        android:maxHeight="50dp"
+        android:onClick="exitButton"
+        android:src="@drawable/ic_exit_foreground" />
+
+    <TextView
+        android:id="@+id/gameState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/gameStateDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gameState"
+        android:layout_centerInParent="true"
+        android:alpha="0.7"
+        android:textColor="@color/colorFade"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/linearDealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@+id/btnStand">
+
+        <GridLayout
+            android:id="@+id/gridDealersHand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearDealer"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:alpha="0.5"
+        android:text="@string/dealersHand"
+        android:textColor="@color/colorFade"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/linearPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@+id/btnStand">
+
+        <GridLayout
+            android:id="@+id/gridPlayersHand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+        </GridLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearPlayer"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:alpha="0.5"
+        android:text="@string/playersHand"
+        android:textColor="@color/colorFade"
+        android:textSize="20sp" />
+
+</RelativeLayout>

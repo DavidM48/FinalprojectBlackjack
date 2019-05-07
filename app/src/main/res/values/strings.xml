@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Final project - Blackjack</string>
+    <string name="play">Play</string>
+    <string name="scoreBoard">Score Board</string>
+    <string name="hit">Hit</string>
+    <string name="stand">Stand</string>
+    <string name="restart">Restart</string>
+    <string name="bet">Bet</string>
+    <string name="dealersHand">Dealer\'s Hand</string>
+    <string name="playersHand">Your Hand</string>
+    <string name="winState">You won!</string>
+    <string name="looseState">You Lost.</string>
+    <string name="tieState">Tie.</string>
+    <string name="bustPlayer">You Busted</string>
+    <string name="bustDealer">Dealer Busted</string>
+    <string name="playerBlackJack">You got BlackJack</string>
+    <string name="dealerBlackJack">Dealer got BlackJack</string>
+    <string name="dealerHigher">Dealer has a better hand</string>
+    <string name="playerHigher">You have a better hand</string>
+    <string name="title">BlackJack</string>
+    <string name="wins">Wins: </string>
+    <string name="winStreak">Win Streak</string>
+    <string name="losses">Losses: </string>
+    <string name="score">Score: </string>
+    <string name="betAmount">Bet: </string>
+    <string name="btnBack">Back</string>
+    <string name="txtScore">Score</string>
+    <string name="txtWins">Wins</string>
+    <string name="txtWinStreak">Win Streak</string>
+    <string name="txtLoses">Losses</string>
+</resources>

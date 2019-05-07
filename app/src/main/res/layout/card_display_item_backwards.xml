@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CDIRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- https://github.com/wajahatkarim3/EasyFlipView -->
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:id="@+id/EFV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:autoFlipBack="false"
+        app:flipDuration="400"
+        app:flipEnabled="true"
+        app:flipFrom="right"
+        app:flipOnTouch="false"
+        app:flipType="horizontal">
+
+        <!-- Back Layout Goes Here -->
+        <include layout="@layout/card_display_item_front" />
+
+        <!-- Front Layout Goes Here -->
+        <include layout="@layout/card_display_item_back" />
+
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+</RelativeLayout>

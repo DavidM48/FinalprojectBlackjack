@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="monospace"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/buttons"
+        android:onClick="play"
+        android:padding="5dp"
+        android:text="@string/play" />
+
+    <Button
+        android:id="@+id/btnScoreBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/buttons"
+        android:onClick="scoreBoard"
+        android:padding="5dp"
+        android:text="@string/scoreBoard" />
+
+
+</RelativeLayout>
