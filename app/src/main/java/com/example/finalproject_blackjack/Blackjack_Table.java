@@ -46,7 +46,7 @@ public class Blackjack_Table extends AppCompatActivity implements GestureDetecto
     private static int score;
     private static int bet;
 
-    final static String[] betAmounts = {"0", "10", "20", "20", "30"};
+    final static String[] betAmounts = {"0", "10", "20", "30"};
     private Card[] deck = new Card[52];
 
     private Stack<Card> dealersDeck;
